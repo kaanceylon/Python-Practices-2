@@ -4,17 +4,16 @@
 # Kullanıcıdan sayıyı al
 sayi = int(input("Bir sayı girin: "))
 
-# Asal sayı kontrol fonksiyonu
-def asal_sayi_kontrolu(sayi):
-    if sayi <= 1:
-        return False
-    for i in range(2, int(sayi**0.5) + 1):
-        if sayi % i == 0:
-            return False
-    return True
+if sayi > 1:
 
-# Asal sayı kontrol fonksiyonunu kullanarak sonucu ekrana yazdır
-if asal_sayi_kontrolu(sayi):
-    print(sayi, "asal bir sayıdır.")
-else:
-    print(sayi, "asal bir sayı değildir.")
+    for i in range(1,sayi):
+        if sayi % i == 0: # sayi döngüdeki i sayısına (herhangi bir sayi i) tam bölünüyorsa bu asal değildir.
+           print(sayi, "asal bir sayı değildir.")
+           break 
+        else:
+            print(sayi, "asal bir sayıdır.") 
+    else:
+        print(sayi, "Bir asal sayi değildir.")
+    
+
+

@@ -4,19 +4,10 @@
 # Kullanıcıdan sayıyı aldık
 sayi = int(input("Bir sayı girin: "))
 
-# Asal çarpanları bulan fonksiyon
-def asal_carpanlari_bul(sayi):
-    asal_carpanlar = []
-    i = 2
-    while i <= sayi:
-        if sayi % i == 0:
-            asal_carpanlar.append(i)
-            sayi //= i
-        else:
-            i += 1
-    return asal_carpanlar
-
-# Asal çarpanları bulan fonksiyonu çağır ve sonucu ekrana yazdır
-
-asal_carpanlar = asal_carpanlari_bul(sayi)
-print(f"{sayi} sayısının asal çarpanları: {asal_carpanlar}")
+bolen = 2
+for i in range(1,sayi):
+    if(sayi % bolen == 0):
+        print(bolen)
+        sayi//=bolen
+    else:
+        bolen+=1
